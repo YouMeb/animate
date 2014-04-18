@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .test {
+      background: #eee;
+      width: 300px;
+      height: 100px;
+    }
+
+    .animate.animate-enter {
+      transition: all .4s;
+    }
+
+    .animate.animate-enter-active {
+      background: #f60;
+    }
+
+    .animate.animate-leave {
+      background: #f60;
+      transition: all .4s;
+    }
+
+    .animate.animate-leave-active {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="test"></div>
+  <script src="build/build.js"></script>
+  <script>
+    var animate = require('animate');
+    var el = document.querySelector('.test');
+    var a = animate(el);
+  </script>
+</body>
+</html>
